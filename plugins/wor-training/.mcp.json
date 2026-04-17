@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wor-training": {
+      "type": "http",
+      "url": "https://yue9grn54i.us-east-1.awsapprunner.com/mcp"
+    }
+  }
+}
