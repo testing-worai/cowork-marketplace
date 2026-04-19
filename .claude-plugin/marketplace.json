@@ -11,8 +11,8 @@
     {
       "name": "wor-training",
       "source": "./plugins/wor-training",
-      "description": "Interactive Cowork operator training with progress tracking.",
-      "version": "1.0.0"
+      "description": "Interactive Cowork operator training (v3) with progress tracking.",
+      "version": "1.1.0"
     }
   ]
 }
