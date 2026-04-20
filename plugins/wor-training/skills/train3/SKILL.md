@@ -15,14 +15,15 @@ All training content is served dynamically from the WorkOnReferrals training ser
 
 ## AUTHENTICATION
 
-1. Ask the user: "Do you have a WorkOnReferrals training license key?"
-2. **If yes** → Call `authenticate` with their key.
-   - If valid: follow ALL orchestration instructions returned in the response for every subsequent interaction.
+1. Start every new session by calling `get_orientation_brief` (no license key required). Deliver the full Orientation flow from the returned content: Turn A (North Star), Turn B (Meta-Practices), Turn C (Prereq Step 0), then Startup Steps 1–5. This is the free lead magnet and must be delivered before asking for a license.
+2. After Orientation, ask: "Do you have a WorkOnReferrals training license key?"
+3. **If yes** → Call `authenticate` with their key.
+   - If valid: follow ALL orchestration instructions returned in the response for every subsequent interaction. Any paid license unlocks all seven sections.
    - If invalid/expired/revoked: inform the user clearly with the reason provided, offer to generate a payment link.
-3. **If no** → Explain that Sections 1–3 are free. Call `authenticate` with `license_key: "FREE"` to begin.
-   - To unlock Sections 4–7, ask for their email and call `get_payment_link` with `skill_id: "cowork-training"`. Present both plans before calling:
-     - Monthly: $200/mo
-     - Annual: $2,160/yr (saves $240)
+4. **If no** → Explain that the seven-section curriculum (Sections 1–7) requires a paid license. Ask for their email and call `get_payment_link` with `skill_id: "cowork-training"`. Present both plans before calling:
+   - Monthly: $200/mo
+   - Annual: $2,160/yr (saves $240)
+5. Never deliver any Section 1.1+ content without a valid paid license. Sections labeled `free`, `professional`, or `enterprise` in the API response are metadata for a future tier split — at launch, every paid license grants full access.
 
 ---
 
@@ -157,7 +158,9 @@ Before any training content begins, run this opening sequence. **Three separate 
 
 Then:
 4. **Startup Steps 1–5** — Privacy / Project / Thread / Folder / Environment Scan. Each is its own turn.
-5. **Step 6 — Orientation Handoff** — Capability Delta + calibration question. Transitions to Section 1.1.
+5. **Step 6 — Orientation Handoff** — Capability Delta + calibration question. This is the end of the free orientation. If the learner already authenticated with a paid license, transition to Section 1.1. If not, this is the paywall handoff — ask for a license key or offer `get_payment_link`.
+
+**Role plugin recommendation rule:** during the Capability Delta (Step 6), if the learner's role matches one of the ten pre-built role plugins (Sales, HR, Design, Engineering, Operations, Financial Analysis, Investment Banking, Equity Research, Private Equity, Wealth Management), preview that Segment 1.10 (post-paywall) will install it and show the "Cowork doing your job" moment. If their role does not match, note it and say Section 4 is where we customize for their specific work.
 
 ---
 
@@ -336,7 +339,7 @@ Show at the end of every chunk via `list_sections` and `list_segments` data:
 
 ```
 Current Pass: MVP
-Pass summary: MVP [X/56] • Basic [0/56] • Intermediate [0/56] • Advanced [0/56]
+Pass summary: MVP [X/60] • Basic [0/60] • Intermediate [0/60] • Advanced [0/60]
 ```
 
 ---
@@ -423,7 +426,7 @@ Please check:
 2. Try again in a few minutes
 3. Ensure the plugin is enabled (Customize → Manage Plugins)
 
-For support: sam@workonreferrals.com
+For support: operations@workonreferrals.com
 
 ---
 *© 2026 Work On Referrals, Inc. All rights reserved.*

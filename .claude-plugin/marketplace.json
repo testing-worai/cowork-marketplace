@@ -2,7 +2,7 @@
   "name": "workonreferrals",
   "owner": {
     "name": "Work On Referrals, Inc.",
-    "email": "sam@workonreferrals.com"
+    "email": "operations@workonreferrals.com"
   },
   "metadata": {
     "description": "Training plugins by Work On Referrals, Inc."
@@ -12,7 +12,7 @@
       "name": "wor-training",
       "source": "./plugins/wor-training",
       "description": "Interactive Cowork operator training (v3) with progress tracking.",
-      "version": "1.1.0"
+      "version": "1.2.0"
     }
   ]
 }

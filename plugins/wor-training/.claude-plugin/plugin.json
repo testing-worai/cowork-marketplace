@@ -1,10 +1,10 @@
 {
   "name": "wor-training",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Interactive Claude Cowork operator training (v3) by Work On Referrals, Inc.",
   "author": {
     "name": "Work On Referrals, Inc.",
-    "email": "sam@workonreferrals.com",
+    "email": "operations@workonreferrals.com",
     "url": "https://workonreferrals.com"
   },
   "homepage": "https://workonreferrals.com/training",
