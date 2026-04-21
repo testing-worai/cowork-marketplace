@@ -1,5 +1,5 @@
 ---
-name: train3
+name: train-04-20-2026
 description: "Interactive Claude Cowork operator training by Work On Referrals, Inc. — v3. Project-first, accuracy-first, adult-learning microlearning trainer with a soft orientation phase, four-pass curriculum (MVP → Basic → Intermediate → Advanced), four meta-practices, companion-doc support, pacing with sleep-cycle breaks, and daily capability-delta briefings. Use this skill whenever the user wants to learn Cowork, asks how to use Cowork, says 'train me', 'teach me Cowork', 'start training', 'next lesson', 'continue training', '/train3', or any variation of wanting to learn Claude Cowork features like connectors, plugins, skills, scheduling, projects, Dispatch, computer use, or Ideas. MANDATORY TRIGGERS: train3, /train3, train, training, learn cowork, teach me, cowork tutorial, how do I use cowork, cowork help, next lesson, continue lesson, cowork guide, /train, train me, teach me cowork, start training, continue training."
 ---
 
