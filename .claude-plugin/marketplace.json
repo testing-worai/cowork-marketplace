@@ -12,7 +12,7 @@
       "name": "wor-training",
       "source": "./plugins/wor-training",
       "description": "Interactive Cowork operator training (04-23-2026) — paid-only, standalone Stripe Payment Link, v5a.1 response-format lockdown.",
-      "version": "1.4.0"
+      "version": "1.4.1"
     }
   ]
 }
