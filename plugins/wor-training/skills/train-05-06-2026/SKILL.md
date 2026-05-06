@@ -1,14 +1,14 @@
 ---
-name: train-04-23-2026
-description: "Claude Cowork Operator Training v1.4.0 (2026-04-23). Single-point-per-turn microlearning trainer with OS-aware guidance, emoji-digit decision menus, 📍 progress markers, and gender-neutral praise protocol. Gated on a paid license — unauthenticated callers are pointed at the standalone Stripe Payment Link. Use when the user says 'train me', 'teach me Cowork', 'start training', '/train-04-23-2026', 'start the training', or any variation of wanting to learn Claude Cowork. MANDATORY TRIGGERS: train-04-23-2026, /train-04-23-2026, train-04-20-2026, /train-04-20-2026, train5a, /train5a, train, /train, train3, /train3, train me, teach me cowork, start training, continue training, next lesson, cowork tutorial, cowork help, cowork training, learn cowork."
+name: train-05-06-2026
+description: "Claude Cowork Operator Training v1.5.0 (2026-05-06). Single-point-per-turn microlearning trainer with OS-aware guidance, emoji-digit decision menus, 📍 progress markers, and gender-neutral praise protocol. Gated on a paid license — unauthenticated callers are pointed at the standalone Stripe Payment Link. Use when the user says 'train me', 'teach me Cowork', 'start training', '/train-05-06-2026', 'start the training', or any variation of wanting to learn Claude Cowork. MANDATORY TRIGGERS: train-05-06-2026, /train-05-06-2026, train-04-23-2026, /train-04-23-2026, train-04-20-2026, /train-04-20-2026, train5a, /train5a, train, /train, train3, /train3, train me, teach me cowork, start training, continue training, next lesson, cowork tutorial, cowork help, cowork training, learn cowork."
 ---
 
-2026-04-23 PT | Version: v1.4.0
+2026-05-06 PT | Version: v1.5.0
 
-# Claude Cowork Operator Training — v1.4.0 (Paid Only)
+# Claude Cowork Operator Training — v1.5.0 (Paid Only)
 ## By Work On Referrals, Inc. — Copyright 2026 Work On Referrals, Inc.
 
-You are delivering the Claude Cowork Operator Training program (v1.4.0).
+You are delivering the Claude Cowork Operator Training program (v1.5.0).
 Your job: guide a learner through mastering Claude Cowork using real data, real connectors, and real tasks — teaching ONE point per turn, with locked house style for every response.
 
 This training is paid. Curriculum content (Sections 1–7) requires a valid license key served by the `wor-training` MCP connector. Unauthenticated callers get the opening ritual (T-OS + T-HELLO) and then hit T-AUTH, which points them at the standalone Stripe Payment Link.
@@ -156,14 +156,14 @@ The footer is a TRUE FOOTER: a single short italic line, placed directly under t
 Exact format (locked — no variation):
 
 ```
-*© 2026 Work On Referrals, Inc. · Train v1.4.0*
+*© 2026 Work On Referrals, Inc. · Train v1.5.0*
 ```
 
 Rules:
 - No horizontal rule above or below the footer. The italic alone is the footer signal.
 - Plain markdown italic only — never `<sub>`, `<small>`, or any HTML tag. These render as literal text in Cowork and distract.
 - One line. Short. Compact copyright + version, separated by a middle-dot `·`.
-- Exact text locked: `*© 2026 Work On Referrals, Inc. · Train v1.4.0*`
+- Exact text locked: `*© 2026 Work On Referrals, Inc. · Train v1.5.0*`
 - Placed directly below the last decision-menu option with ONE blank line between.
 - No emoji in the footer.
 - Progress marker is NEVER repeated — it's on the top headline.
@@ -213,7 +213,7 @@ Wrong (lines collapse into one paragraph):
 - Never use H1 (`#`) or H3 (`###`) for the opening — always H2 (`##`).
 - Never place a horizontal rule above or below the footer.
 - Never wrap the footer in `<sub>`, `<small>`, or any HTML tag — plain italic markdown only.
-- Never use the long-form footer. Always the compact `*© 2026 Work On Referrals, Inc. · Train v1.4.0*`.
+- Never use the long-form footer. Always the compact `*© 2026 Work On Referrals, Inc. · Train v1.5.0*`.
 - Never write consecutive bold-label lines without `-` bullets.
 - Never use emoji digits (1️⃣–🔟) in body content.
 - Never stack more than 🔟 options in one decision menu.
@@ -527,7 +527,7 @@ Every curriculum-serving tool requires a valid `license_key`. Unauthenticated ca
 - Never use H1 or H3 for the opening — always H2.
 - Never place a horizontal rule above or below the footer.
 - Never wrap the footer in `<sub>`, `<small>`, or any HTML tag.
-- Never use the long-form footer. Use the compact `*© 2026 Work On Referrals, Inc. · Train v1.4.0*`.
+- Never use the long-form footer. Use the compact `*© 2026 Work On Referrals, Inc. · Train v1.5.0*`.
 - Never write consecutive bold-label lines without `-` bullets.
 - Never turn T-PREREQ-ACCOUNT into a check or quiz — notice only.
 - Never use emoji digits (1️⃣–🔟) in body content — decision menus only.
@@ -555,7 +555,7 @@ Then one blank line, then body.
 Every training response closes with a MINIMAL ITALIC FOOTER — no horizontal rule, placed directly under the decision menu with one blank line between:
 
 ```
-*© 2026 Work On Referrals, Inc. · Train v1.4.0*
+*© 2026 Work On Referrals, Inc. · Train v1.5.0*
 ```
 
 Rules:
@@ -567,6 +567,20 @@ Rules:
 
 ## CHANGE LOG
 
+**v1.5.0 (2026-05-06)** — Anthropic marketplace compliance + Local Training Log removed:
+- MCP tool annotations on all 6 tools (`title`, `readOnlyHint`, `destructiveHint`, `idempotentHint`, `openWorldHint`) per Anthropic Software Directory Policy §5.E.
+- All 6 tool descriptions rewritten with explicit "when to invoke" guidance + Stripe Billing Portal docs link in `manage_subscription`.
+- New `errorResponse` helper in the MCP server: every catch returns a specific actionable message + UUID `request_id` + support email; same `request_id` logged server-side for support correlation.
+- Stricter input validation: `.min(1)` on `skill_id`, `segment_id`, `.int().min(1)` on `section_number`.
+- New `include_instructions: boolean` (default `true`) parameter on `authenticate` for token frugality on re-auth within a session.
+- MCP Streamable HTTP spec compliance: `Origin` header validation on `/mcp` (DNS rebinding mitigation, allowlist for Anthropic-hosted clients + WoR + localhost); `GET /mcp` returns HTTP 405 with `Allow: POST`.
+- **Removed Local Training Log (LTL) directive.** The per-turn file-write was duplicating server-side `progress` tracking and slowing responses. Server-side state remains the source of truth for resume / completion counts / drop-off detection. Future on-demand "export training history" tool can fill any gap.
+- Plugin license: `Proprietary` → `MIT`. Added `LICENSE` and `SECURITY.md` to the public marketplace repo. Privacy Policy section added to README (URL pending publication).
+- Skill name (`train-04-23-2026`) and directory paths unchanged — this is a behavior bump, not a curriculum rename.
+- Footer label: `Train v1.4.0` → `Train v1.5.0` everywhere it appears.
+
+**v1.4.1 (2026-04-24)** — Pure republish bump (no behavior change) to resync Cowork's update detection. Both `plugin.json` and `marketplace.json` now in lockstep at 1.4.1.
+
 **v1.4.0 (2026-04-23)** — Date-based rename (train-04-23-2026) + payment cutover:
 - Removed in-chat `get_payment_link` and `get_orientation_brief` MCP tools — payment is now a standalone Stripe Payment Link URL that lives outside the chat.
 - Eliminated the free tier entirely. All curriculum requires a paid license.
@@ -574,7 +588,7 @@ Rules:
 - Opening ritual (T-OS, T-HELLO) remains unauthenticated because it's plain skill text — the paywall kicks in at T-AUTH and at every MCP curriculum call server-side.
 - Dropped the `test_mode` bypass flag.
 - Removed annual pricing references (annual plan suspended 2026-04-21).
-- Footer rebranded: `Train5a v5a.1` → `Train v1.4.0`. Frontmatter `name` is now `train-04-23-2026`.
+- Footer rebranded: `Train5a v5a.1` → `Train v1.5.0`. Frontmatter `name` is now `train-04-23-2026`.
 - `manage_subscription` MCP tool retained for in-chat billing-portal access.
 
 **v5a.1 (2026-04-22 / Sam Lee style patch)** — Style consolidation:
