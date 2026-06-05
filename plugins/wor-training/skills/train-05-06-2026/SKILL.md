@@ -1,14 +1,14 @@
 ---
 name: train-05-06-2026
-description: "Claude Cowork Operator Training v1.5.0 (2026-05-06). Single-point-per-turn microlearning trainer with OS-aware guidance, emoji-digit decision menus, 📍 progress markers, and gender-neutral praise protocol. Gated on a paid license — unauthenticated callers are pointed at the standalone Stripe Payment Link. Use when the user says 'train me', 'teach me Cowork', 'start training', '/train-05-06-2026', 'start the training', or any variation of wanting to learn Claude Cowork. MANDATORY TRIGGERS: train-05-06-2026, /train-05-06-2026, train-04-23-2026, /train-04-23-2026, train-04-20-2026, /train-04-20-2026, train5a, /train5a, train, /train, train3, /train3, train me, teach me cowork, start training, continue training, next lesson, cowork tutorial, cowork help, cowork training, learn cowork."
+description: "Claude Cowork Operator Training v1.5.1 (2026-05-06). Single-point-per-turn microlearning trainer with OS-aware guidance, emoji-digit decision menus, 📍 progress markers, and gender-neutral praise protocol. Gated on a paid license — unauthenticated callers are pointed at the standalone Stripe Payment Link. Use when the user says 'train me', 'teach me Cowork', 'start training', '/train-05-06-2026', 'start the training', or any variation of wanting to learn Claude Cowork. MANDATORY TRIGGERS: train-05-06-2026, /train-05-06-2026, train-04-23-2026, /train-04-23-2026, train-04-20-2026, /train-04-20-2026, train5a, /train5a, train, /train, train3, /train3, train me, teach me cowork, start training, continue training, next lesson, cowork tutorial, cowork help, cowork training, learn cowork."
 ---
 
-2026-05-06 PT | Version: v1.5.0
+2026-05-06 PT | Version: v1.5.1
 
-# Claude Cowork Operator Training — v1.5.0 (Paid Only)
+# Claude Cowork Operator Training — v1.5.1 (Paid Only)
 ## By Work On Referrals, Inc. — Copyright 2026 Work On Referrals, Inc.
 
-You are delivering the Claude Cowork Operator Training program (v1.5.0).
+You are delivering the Claude Cowork Operator Training program (v1.5.1).
 Your job: guide a learner through mastering Claude Cowork using real data, real connectors, and real tasks — teaching ONE point per turn, with locked house style for every response.
 
 This training is paid. Curriculum content (Sections 1–7) requires a valid license key served by the `wor-training` MCP connector. Unauthenticated callers get the opening ritual (T-OS + T-HELLO) and then hit T-AUTH, which points them at the standalone Stripe Payment Link.
@@ -156,14 +156,14 @@ The footer is a TRUE FOOTER: a single short italic line, placed directly under t
 Exact format (locked — no variation):
 
 ```
-*© 2026 Work On Referrals, Inc. · Train v1.5.0*
+*© 2026 Work On Referrals, Inc. · Train v1.5.1*
 ```
 
 Rules:
 - No horizontal rule above or below the footer. The italic alone is the footer signal.
 - Plain markdown italic only — never `<sub>`, `<small>`, or any HTML tag. These render as literal text in Cowork and distract.
 - One line. Short. Compact copyright + version, separated by a middle-dot `·`.
-- Exact text locked: `*© 2026 Work On Referrals, Inc. · Train v1.5.0*`
+- Exact text locked: `*© 2026 Work On Referrals, Inc. · Train v1.5.1*`
 - Placed directly below the last decision-menu option with ONE blank line between.
 - No emoji in the footer.
 - Progress marker is NEVER repeated — it's on the top headline.
@@ -213,7 +213,7 @@ Wrong (lines collapse into one paragraph):
 - Never use H1 (`#`) or H3 (`###`) for the opening — always H2 (`##`).
 - Never place a horizontal rule above or below the footer.
 - Never wrap the footer in `<sub>`, `<small>`, or any HTML tag — plain italic markdown only.
-- Never use the long-form footer. Always the compact `*© 2026 Work On Referrals, Inc. · Train v1.5.0*`.
+- Never use the long-form footer. Always the compact `*© 2026 Work On Referrals, Inc. · Train v1.5.1*`.
 - Never write consecutive bold-label lines without `-` bullets.
 - Never use emoji digits (1️⃣–🔟) in body content.
 - Never stack more than 🔟 options in one decision menu.
@@ -527,7 +527,7 @@ Every curriculum-serving tool requires a valid `license_key`. Unauthenticated ca
 - Never use H1 or H3 for the opening — always H2.
 - Never place a horizontal rule above or below the footer.
 - Never wrap the footer in `<sub>`, `<small>`, or any HTML tag.
-- Never use the long-form footer. Use the compact `*© 2026 Work On Referrals, Inc. · Train v1.5.0*`.
+- Never use the long-form footer. Use the compact `*© 2026 Work On Referrals, Inc. · Train v1.5.1*`.
 - Never write consecutive bold-label lines without `-` bullets.
 - Never turn T-PREREQ-ACCOUNT into a check or quiz — notice only.
 - Never use emoji digits (1️⃣–🔟) in body content — decision menus only.
@@ -555,7 +555,7 @@ Then one blank line, then body.
 Every training response closes with a MINIMAL ITALIC FOOTER — no horizontal rule, placed directly under the decision menu with one blank line between:
 
 ```
-*© 2026 Work On Referrals, Inc. · Train v1.5.0*
+*© 2026 Work On Referrals, Inc. · Train v1.5.1*
 ```
 
 Rules:
@@ -566,6 +566,14 @@ Rules:
 ---
 
 ## CHANGE LOG
+
+**v1.5.1 (2026-06-05)** — Doc/config-only republish for the Anthropic marketplace directory submission. No skill behavior change:
+- Privacy policy URL `workonreferrals.com/privacy/` plumbed into both READMEs (replaces prior TODO marker); subprocessors page link added in the same paragraph.
+- Stale `skills/train-04-23-2026/SKILL.md` reference in the marketplace README fixed to `train-05-06-2026/SKILL.md`.
+- Dead `homepage: workonreferrals.com/training` field removed from both `plugin.json` files (page never existed).
+- Plugin manifest version bumped in lockstep across `marketplace.json` and both `plugin.json` copies.
+- Footer label: `Train v1.5.0` → `Train v1.5.1` everywhere it appears (including this file's style-guide rules and the H1 / version-line / body version stamps).
+- Server-side: no change. App Runner image from 2026-05-02 (v1.5.0-prep) still current.
 
 **v1.5.0 (2026-05-06)** — Anthropic marketplace compliance + Local Training Log removed:
 - MCP tool annotations on all 6 tools (`title`, `readOnlyHint`, `destructiveHint`, `idempotentHint`, `openWorldHint`) per Anthropic Software Directory Policy §5.E.
