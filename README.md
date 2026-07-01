@@ -13,7 +13,7 @@ In Claude Cowork:
 3. Install **wor-training**
 4. Say *"train me"* to start
 
-You will be prompted for a license key on first use. Licenses are issued via a standalone Stripe Payment Link; the key is emailed to you within a minute of checkout.
+You will be prompted for a license key on first use. Licenses are issued via Stripe checkout — you choose a plan (a 3-month course, then optional annual continuation; pay monthly or upfront) and accept the Terms of Service — and the key is emailed to you within a minute of checkout.
 
 ## What's in this repository
 
