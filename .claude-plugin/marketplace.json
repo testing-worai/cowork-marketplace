@@ -11,8 +11,8 @@
     {
       "name": "wor-training",
       "source": "./plugins/wor-training",
-      "description": "Interactive Cowork operator training — paid-only, standalone Stripe Payment Link, MIT-licensed connector, MCP spec-compliant (annotations, Origin validation, Streamable HTTP).",
-      "version": "1.5.2"
+      "description": "Interactive Cowork operator training — paid-only, stage-aware Stripe checkout (course + continuation), MIT-licensed connector, MCP spec-compliant (annotations, Origin validation, Streamable HTTP).",
+      "version": "1.6.0"
     }
   ]
 }
