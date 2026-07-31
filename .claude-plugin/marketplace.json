@@ -11,14 +11,8 @@
     {
       "name": "wor-training",
       "source": "./plugins/wor-training",
-      "description": "Interactive Cowork operator training \u2014 paid-only, stage-aware Stripe checkout (course + continuation), MIT-licensed connector, MCP spec-compliant (annotations, Origin validation, Streamable HTTP).",
+      "description": "Interactive Cowork operator training — paid-only, stage-aware Stripe checkout (course + continuation), MIT-licensed connector, MCP spec-compliant (annotations, Origin validation, Streamable HTTP).",
       "version": "1.6.0"
-    },
-    {
-      "name": "cowork-cost",
-      "source": "./plugins/cowork-cost",
-      "description": "Token/cost visibility for Cowork-on-Bedrock pilots: /cost shows per-chat, per-turn, daily and monthly spend plus prompt-caching savings, from the firm's in-account metering proxy (metadata-only).",
-      "version": "1.0.0"
     }
   ]
 }
